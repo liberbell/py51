@@ -1,2 +1,5 @@
 from urllib.request import urlopen
 
+url = "https://quotes.toscrape.com/"
+response = urlopen(url)
+print(response)
