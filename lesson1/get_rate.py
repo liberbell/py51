@@ -20,5 +20,9 @@ params2 = {
     "data": "today"
 }
 
-resp2 = requests.get(url2, params=params2)
+headers = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+}
+
+resp2 = requests.get(url2, params=params2, headers=headers)
 print(resp2.text)
