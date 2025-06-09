@@ -3,4 +3,4 @@ import requests
 url = "https://quotes.toscrape.com/"
 resp = requests.get(url)
 print(resp.status_code)
-print(resp.text)
+print(resp.content.decode("utf-8"))
