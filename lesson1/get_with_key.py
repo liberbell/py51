@@ -1,4 +1,5 @@
 import configparser
+import requests
 
 config = configparser.ConfigParser()
 
@@ -11,3 +12,5 @@ headers = {
     "Authorization": f"Bearer {key1}",
     "Content-Type": "application/json"
 }
+resp = requests.get(url, headers=headers)
+print(resp.status_code)
