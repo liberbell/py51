@@ -12,10 +12,13 @@ params = {
 resp = requests.get(url, params=params)
 print(resp.json()['data']['rates']['USD'])
 
-url2 = "https://api.sunrisesunset.com/json"
+url2 = "https://api.sunrisesunset.io/json"
 params2 = {
     "lat": 43.6532,
     "lng": -79.3832,
     "timezone": "EST",
     "data": "today"
 }
+
+resp2 = requests.get(url2, params=params2)
+print(resp2.text)
