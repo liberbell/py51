@@ -25,4 +25,4 @@ headers = {
 }
 
 resp2 = requests.get(url2, params=params2, headers=headers)
-print(resp2.text)
+print(resp2.json())
