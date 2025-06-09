@@ -7,4 +7,5 @@ print(resp.content.decode("utf-8"))
 print(resp.headers)
 
 url2 = "https://httpbin.org/headers"
+resp = requests.get(url2)
 print(resp.json())
