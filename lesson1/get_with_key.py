@@ -15,7 +15,7 @@ headers = {
 # resp = requests.get(url, headers=headers)
 # print(resp.status_code)
 
-auth = ("user1", "pass1")
+auth = ("user1", "pass2")
 url = "https://httpbin.org/basic-auth/user1/pass1"
 resp = requests.get(url, auth=auth)
 print(resp.status_code)
