@@ -5,3 +5,6 @@ print(resp.json())
 
 resp = requests.patch("https://www.httpbin.org/patch")
 print(resp.json())
+
+resp = requests.put("https://www.httpbin.org/put")
+print(resp.json())
