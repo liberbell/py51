@@ -12,10 +12,10 @@ headers = {
     "Authorization": f"Bearer {key1}",
     "Content-Type": "application/json"
 }
-resp = requests.get(url, headers=headers)
-print(resp.status_code)
+# resp = requests.get(url, headers=headers)
+# print(resp.status_code)
 
 auth = ("user1", "pass1")
 url = "https://httpbin.org/basic-auth/user1/pass1"
 resp = requests.get(url, auth=auth)
-print(resp.text)
+print(resp.status_code)
