@@ -17,5 +17,5 @@ print(resp.status_code)
 
 auth = ("user1", "pass1")
 url = "https://httpbin.org/basic-auth/user1/pass1"
-resp = requests.get(url)
-print(resp.status_code)
+resp = requests.get(url, auth=auth)
+print(resp.text)
