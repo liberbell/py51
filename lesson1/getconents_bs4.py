@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from bs4.element import NavigableString
 
 url1 = "https://books.toscrape.com"
 resp = requests.get(url1)
@@ -13,3 +14,4 @@ if resp.status_code == 200:
     first_div = soup.div
     # print(first_div.div.div.attrs)
     print(list(soup.ul.children))
+    filter(lambda x: type(x) != NavigableString())
