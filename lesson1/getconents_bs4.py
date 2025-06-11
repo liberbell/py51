@@ -1,7 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-url1 = "https://www.toscrape.com"
+url1 = "https://books.toscrape.com"
 resp = requests.get(url1)
 
-print(resp.content)
+# print(resp.content)
+if resp.status_code == 200:
+    soup = BeautifulSoup(resp.content, "html.parser")
+    print(soup.prettify())
