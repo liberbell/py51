@@ -17,5 +17,4 @@ if resp.status_code == 200:
     print(list(filter(lambda x: type(x) != NavigableString, soup.ul.children)))
 
 def no_navigable_strings(iterable):
-    return list(filter(lambda x: type(x) != NavigableString, soup.ul.children))
     return list(filter(lambda x: type(x) != NavigableString, iterable))
