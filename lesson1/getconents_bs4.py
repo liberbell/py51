@@ -14,4 +14,4 @@ if resp.status_code == 200:
     first_div = soup.div
     # print(first_div.div.div.attrs)
     print(list(soup.ul.children))
-    filter(lambda x: type(x) != NavigableString())
+    print(list(filter(lambda x: type(x) != NavigableString(), soup.ul.children)))
