@@ -7,4 +7,4 @@ resp = requests.get(url1)
 # print(resp.content)
 if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
-    print(soup.prettify())
+    print(soup.title)
