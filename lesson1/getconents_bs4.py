@@ -12,4 +12,4 @@ if resp.status_code == 200:
     # print(soup.div)
     first_div = soup.div
     # print(first_div.div.div.attrs)
-    print(soup.ul)
+    print(list(soup.ul.children))
