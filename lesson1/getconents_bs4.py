@@ -5,6 +5,9 @@ from bs4.element import NavigableString
 url1 = "https://books.toscrape.com"
 resp = requests.get(url1)
 
+def no_navigable_strings(iterable):
+    return list(filter(lambda x: type(x) != NavigableString, iterable))
+
 # print(resp.content)
 if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
@@ -18,5 +21,3 @@ if resp.status_code == 200:
     li_child = no_navigable_strings(soup.ul.children)
     print(li_child)
 
-def no_navigable_strings(iterable):
-    return list(filter(lambda x: type(x) != NavigableString, iterable))
