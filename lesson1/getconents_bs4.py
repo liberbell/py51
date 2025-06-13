@@ -25,5 +25,11 @@ if resp.status_code == 200:
     # print(desc[0])
     # print(soup.ul.li)
     # print(soup.ul.li.next_sibling.next_sibling)
-    print(soup.a.get_text())
+    # print(soup.a.get_text())
+    # print(soup.a.text, soup.a.string)
+    # print(soup.ul.text)
+    # print(soup.ul.string)
+    print(soup.a.text, " of type ", type(soup.a.text))
+    print(soup.a.get_text(), " of type ", type(soup.a.get_text()))
+    print(soup.a.string, " of type ", type(soup.a.string))
 
