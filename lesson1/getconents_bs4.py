@@ -19,7 +19,8 @@ if resp.status_code == 200:
     # print(list(soup.ul.children))
     # print(list(filter(lambda x: type(x) != NavigableString, soup.ul.children)))
     li_child = no_navigable_strings(soup.ul.children)
-    print(li_child)
+    # print(li_child)
     # print(list(soup.ul.descendants))
-    print(no_navigable_strings(soup.ul.descendants))
+    desc = no_navigable_strings(soup.ul.descendants)
+    print(desc[0])
 
