@@ -38,4 +38,5 @@ if resp.status_code == 200:
     # print(len(all_strings))
 
     print(len(soup.find_all()))
+    print(len(soup.find_all("a")))
 
