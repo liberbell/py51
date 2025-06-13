@@ -21,6 +21,8 @@ if resp.status_code == 200:
     li_child = no_navigable_strings(soup.ul.children)
     # print(li_child)
     # print(list(soup.ul.descendants))
-    desc = no_navigable_strings(soup.ul.descendants)
-    print(desc[0])
+    # desc = no_navigable_strings(soup.ul.descendants)
+    # print(desc[0])
+    print(soup.ul.li)
+    print(soup.ul.li.next_sibling.next_sibling)
 
