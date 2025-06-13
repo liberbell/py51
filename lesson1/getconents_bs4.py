@@ -23,6 +23,7 @@ if resp.status_code == 200:
     # print(list(soup.ul.descendants))
     # desc = no_navigable_strings(soup.ul.descendants)
     # print(desc[0])
-    print(soup.ul.li)
-    print(soup.ul.li.next_sibling.next_sibling)
+    # print(soup.ul.li)
+    # print(soup.ul.li.next_sibling.next_sibling)
+    print(soup.a.get_text())
 
