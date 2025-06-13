@@ -17,7 +17,7 @@ if resp.status_code == 200:
     first_div = soup.div
     # print(first_div.div.div.attrs)
     # print(list(soup.ul.children))
-    print(list(filter(lambda x: type(x) != NavigableString, soup.ul.children)))
+    # print(list(filter(lambda x: type(x) != NavigableString, soup.ul.children)))
     li_child = no_navigable_strings(soup.ul.children)
     print(li_child)
 
