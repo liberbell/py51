@@ -33,7 +33,9 @@ if resp.status_code == 200:
     # print(soup.a.get_text(), " of type ", type(soup.a.get_text()))
     # print(soup.a.string, " of type ", type(soup.a.string))
 
-    print(soup.stripped_strings)
-    all_strings = list(soup.stripped_strings)
-    print(all_strings)
+    # print(soup.stripped_strings)
+    # all_strings = list(soup.stripped_strings)
+    # print(len(all_strings))
+
+    print(len(soup.find_all()))
 
