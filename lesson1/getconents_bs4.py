@@ -37,8 +37,8 @@ if resp.status_code == 200:
     # all_strings = list(soup.stripped_strings)
     # print(len(all_strings))
 
-    print(len(soup.find_all()))
-    print(len(soup.find_all(["a", "p"])))
+    # print(len(soup.find_all()))
+    # print(len(soup.find_all(["a", "p"])))
     price_tags = soup.find_all("p", attrs={"class": "price_color"})
 
     for price in price_tags:
