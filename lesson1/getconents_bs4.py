@@ -39,5 +39,9 @@ if resp.status_code == 200:
 
     print(len(soup.find_all()))
     print(len(soup.find_all(["a", "p"])))
-    print(soup.find_all("p", attrs={"class": "price_color"}))
+    price_tags = soup.find_all("p", attrs={"class": "price_color"})
+
+    for price in price_tags:
+        print(price.get_text())
+
 
