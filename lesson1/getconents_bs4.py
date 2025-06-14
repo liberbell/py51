@@ -46,6 +46,7 @@ if resp.status_code == 200:
 
     # add_buttons = soup.find_all("button", attrs={"data-loding-text": "Adding..."})
     add_buttons = soup.find_all("button", attrs={"data-loading-text": "Adding..."})
+    add_buttons = soup.find_all("button", attrs={"data-loading-text": lambda x: "add" in x.lower() or "remove" in x.lower()})
     # add_buttons = soup.find_all("button")
     print(add_buttons)
 
