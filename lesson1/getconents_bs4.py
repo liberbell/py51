@@ -38,5 +38,6 @@ if resp.status_code == 200:
     # print(len(all_strings))
 
     print(len(soup.find_all()))
-    print(len(soup.find_all("a")))
+    print(len(soup.find_all(["a", "p"])))
+    print(soup.find_all("p", attrs={"class": "price_color"}))
 
