@@ -44,4 +44,7 @@ if resp.status_code == 200:
     for price in price_tags:
         print(price.get_text())
 
+    add_buttons = soup.find_all("button", attrs={"data-loding-text": "Adding..."})
+    print(len(add_buttons))
+
 
