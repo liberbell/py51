@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 url = "https://books.toscrape.com"
 
 def extract_book_data(book_tag):
-    title = book_tag.find("h3").find("a")["title"]
+    # title = book_tag.find("h3").find("a")["title"]
+    title = book_tag.find("h3").find("h3").find("a")
 
 resp = requests.get(url)
 if resp.status_code == 200:
