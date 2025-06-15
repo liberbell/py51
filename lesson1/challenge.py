@@ -5,7 +5,7 @@ url = "https://books.toscrape.com"
 
 def extract_book_data(book_tag):
     # title = book_tag.find("h3").find("a")["title"]
-    title = book_tag.find("h3").find("h3").find("a")
+    title = book_tag.find("h3").find("h3").find("a")["title"]
 
 resp = requests.get(url)
 if resp.status_code == 200:
