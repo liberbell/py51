@@ -44,8 +44,12 @@ if resp.status_code == 200:
     # book_price = clean_price2(book_price)
     # print(book_title, book_price, book_rating)
     # print(type(book_price))
+    books_data = [extract_book_data(book_tag) for book_tag in books_tags]
+    print(books_data)
 
-books_tags = soup.find_all("article", attlrs={"class": "product_pod"})
-books_data = [extract_book_data(book_tag) for book_tag in books_tags]
+# books_tags = soup.find_all("article", attlrs={"class": "product_pod"})
 
-print(extract_book_data(choice(books_tags)))
+
+# print(extract_book_data(choice(books_tags)))
+for book in books_data:
+    print(book["price"])
