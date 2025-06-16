@@ -62,3 +62,5 @@ if resp.status_code == 200:
 
 df = pd.DataFrame(books_data)
 print(df)
+print(df.price.mean())
+print(df.price < 20)
