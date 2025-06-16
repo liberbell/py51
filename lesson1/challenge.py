@@ -5,6 +5,7 @@ url = "https://books.toscrape.com"
 
 def extract_book_data(book_tag):
     title = book_tag.find("h3").find("a")["title"]
+    price = book_tag.find("p", attrs={"class": "price_color"}).text
     return title
 
 resp = requests.get(url)
