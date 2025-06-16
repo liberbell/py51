@@ -27,7 +27,7 @@ def extract_book_data(book_tag):
     return {
         "title": title,
         "price": clean_price2(price),
-        "rating": rating
+        "rating": convert_rating(rating)
     }
     # return title, price, rating
 
