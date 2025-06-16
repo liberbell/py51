@@ -35,4 +35,4 @@ if resp.status_code == 200:
     print(book_title, book_price, book_rating)
     print(type(book_price))
 
-print(choice(books_tags))
+print(extract_book_data(choice(books_tags)))
