@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 from random import choice
+import pandas as pd
 
 url = "https://books.toscrape.com"
 
@@ -45,16 +46,19 @@ if resp.status_code == 200:
     # print(book_title, book_price, book_rating)
     # print(type(book_price))
     books_data = [extract_book_data(book_tag) for book_tag in books_tags]
-    print(books_data)
+    # print(books_data)
 
 # books_tags = soup.find_all("article", attlrs={"class": "product_pod"})
 
 
 # print(extract_book_data(choice(books_tags)))
-for book in books_data:
-    print(book["price"])
+# for book in books_data:
+#     print(book["price"])
 
 # print(extract_book_data(choice(books_tags)))
-for book in books_data:
-    if book["price"] < 20:
-        print(book["title"])
+# for book in books_data:
+#     if book["price"] < 20:
+#         print(book["title"])
+
+df = pd.DataFrame(books_data)
+print(df)
