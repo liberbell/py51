@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+from random import choice
 
 url = "https://books.toscrape.com"
 
@@ -33,3 +34,5 @@ if resp.status_code == 200:
     # book_price = clean_price2(book_price)
     print(book_title, book_price, book_rating)
     print(type(book_price))
+
+print(choice(books_tags))
