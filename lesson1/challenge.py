@@ -53,3 +53,7 @@ if resp.status_code == 200:
 # print(extract_book_data(choice(books_tags)))
 for book in books_data:
     print(book["price"])
+
+# print(extract_book_data(choice(books_tags)))
+for book in books_data:
+    print(book["title"])
