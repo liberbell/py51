@@ -10,6 +10,7 @@ def extract_book_data(book_tag):
     return title, price, rating
 
 def clean_price(price):
+    # return "".join([char for char in price if char.isdigit() or char == '.'])
     return float("".join([char for char in price if char.isdigit() or char == '.']))
 
 resp = requests.get(url)
