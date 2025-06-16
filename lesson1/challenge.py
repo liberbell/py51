@@ -17,4 +17,5 @@ if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
     books_tags = soup.find_all("article", attrs={"class": "product_pod"})
     book_title, book_price, book_rating = extract_book_data(books_tags[3])
+    book_price = clean_price(book_price)
     print(book_title, book_price, book_rating)
