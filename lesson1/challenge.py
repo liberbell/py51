@@ -15,7 +15,7 @@ def clean_price(price):
     return float("".join([char for char in price if char.isdigit() or char == '.']))
 
 def clean_price2(price):
-    return re.sub("[^0-9.]", "", price)
+    return float(re.sub("[^0-9.]", "", price))
 
 resp = requests.get(url)
 if resp.status_code == 200:
