@@ -56,4 +56,5 @@ for book in books_data:
 
 # print(extract_book_data(choice(books_tags)))
 for book in books_data:
-    print(book["title"])
+    if book["price"] < 20:
+        print(book["title"])
