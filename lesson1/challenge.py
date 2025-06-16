@@ -19,6 +19,7 @@ def convert_rating(rating):
     }
     return ratings.get(rating, 0)
 
+
 def extract_book_data(book_tag):
     title = book_tag.find("h3").find("a")["title"]
     price = book_tag.find("p", attrs={"class": "price_color"}).get_text()
@@ -43,5 +44,8 @@ if resp.status_code == 200:
     # book_price = clean_price2(book_price)
     # print(book_title, book_price, book_rating)
     # print(type(book_price))
+
+books_tags = soup.find_all("article", attlrs={"class": "product_pod"})
+books_data = [extract_book_data(book_tag) for book_tag in books_tags]
 
 print(extract_book_data(choice(books_tags)))
