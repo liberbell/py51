@@ -60,10 +60,10 @@ resp = requests.get(url)
 #     if book["price"] < 20:
 #         print(book["title"])
 
-df = pd.DataFrame(books_data)
-print(df)
-print(df.price.mean())
-print(df[df.price < 20])
+# df = pd.DataFrame(books_data)
+# print(df)
+# print(df.price.mean())
+# print(df[df.price < 20])
 # df.to_csv("book.csv", index=False)
 # df.to_json("book.json", orient="records")
 
