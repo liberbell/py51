@@ -37,6 +37,9 @@ def clean_price(price):
     # return "".join([char for char in price if char.isdigit() or char == '.'])
     return float("".join([char for char in price if char.isdigit() or char == '.']))
 
+def fiction_category_anchor(tag):
+    return tag.name == "a" and "category" in tag["href"]
+
 resp = requests.get(url)
 # if resp.status_code == 200:
 #     soup = BeautifulSoup(resp.content, "html.parser")
