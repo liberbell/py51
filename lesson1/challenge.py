@@ -38,14 +38,14 @@ def clean_price(price):
     return float("".join([char for char in price if char.isdigit() or char == '.']))
 
 resp = requests.get(url)
-if resp.status_code == 200:
-    soup = BeautifulSoup(resp.content, "html.parser")
-    books_tags = soup.find_all("article", attrs={"class": "product_pod"})
-    # book_title, book_price, book_rating = extract_book_data(books_tags[3])
-    # book_price = clean_price2(book_price)
-    # print(book_title, book_price, book_rating)
-    # print(type(book_price))
-    books_data = [extract_book_data(book_tag) for book_tag in books_tags]
+# if resp.status_code == 200:
+#     soup = BeautifulSoup(resp.content, "html.parser")
+#     books_tags = soup.find_all("article", attrs={"class": "product_pod"})
+#     # book_title, book_price, book_rating = extract_book_data(books_tags[3])
+#     # book_price = clean_price2(book_price)
+#     # print(book_title, book_price, book_rating)
+#     # print(type(book_price))
+#     books_data = [extract_book_data(book_tag) for book_tag in books_tags]
     # print(books_data)
 
 # books_tags = soup.find_all("article", attlrs={"class": "product_pod"})
@@ -65,4 +65,9 @@ print(df)
 print(df.price.mean())
 print(df[df.price < 20])
 # df.to_csv("book.csv", index=False)
-df.to_json("book.json", orient="records")
+# df.to_json("book.json", orient="records")
+
+if resp.status_code == 200:
+    soup = BeautifulSoup(resp.content, "html.parser")
+    soup_id = soup.find_all(id="messages")
+    print(soup_id)
