@@ -69,5 +69,5 @@ resp = requests.get(url)
 
 if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
-    soup_id = soup.find_all(id="messages")
+    soup_id = soup.find_all(attrs={"id": "messages"})
     print(soup_id)
