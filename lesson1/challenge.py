@@ -71,4 +71,5 @@ if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
     soup_id = soup.find_all(attrs={"id": "messages"})
     soup_id = soup.find_all(attrs={"id": lambda x: x is not None})
+    soup_id = soup.find_all(lambda x: x is not None)
     print(soup_id)
