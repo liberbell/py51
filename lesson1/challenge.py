@@ -72,4 +72,5 @@ if resp.status_code == 200:
     soup_id = soup.find_all(attrs={"id": "messages"})
     soup_id = soup.find_all(attrs={"id": lambda x: x is not None})
     soup_id = soup.find_all(lambda x: x is not None)
+    soup_id = soup.find_all(lambda x: x.has_attr("id"))
     print(soup_id)
