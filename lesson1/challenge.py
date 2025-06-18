@@ -78,4 +78,5 @@ if resp.status_code == 200:
     # soup_id = soup.find_all(lambda x: x.has_attr("id"))
     # soup_id = soup.find_all(fiction_category_anchor)
     soup_text = soup.find_all(string="Fiction")
+    soup_text = re.compile("Fiction", re.I)
     print(soup_text)
