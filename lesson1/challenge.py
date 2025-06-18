@@ -38,7 +38,7 @@ def clean_price(price):
     return float("".join([char for char in price if char.isdigit() or char == '.']))
 
 def fiction_category_anchor(tag):
-    return tag.name == "a" and "category" in tag["href"]
+    return tag.name == "a" and "category" in tag["href"] and "Fiction" in tag.text
 
 resp = requests.get(url)
 # if resp.status_code == 200:
@@ -76,4 +76,5 @@ if resp.status_code == 200:
     soup_id = soup.find_all(attrs={"id": lambda x: x is not None})
     soup_id = soup.find_all(lambda x: x is not None)
     soup_id = soup.find_all(lambda x: x.has_attr("id"))
+    soup_id = fiction_category_anchor(soup)
     print(soup_id)
