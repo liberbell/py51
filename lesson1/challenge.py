@@ -90,4 +90,5 @@ if resp.status_code == 200:
     soup_text = soup.find_all("a", string=re.compile("Fiction", re.I))
     all_text = list(soup_text)
     for text in all_text:
-        print(text.parent)
+        if "fiction" == text.lower() and text.parent.name == "a":
+            print(text.parent)
