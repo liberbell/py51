@@ -83,7 +83,7 @@ if resp.status_code == 200:
         # print(text.strip())
     soup_list = list(soup.stripped_strings)
     for text in soup_list:
-        if text.lower() == "fiction":
+        if "fiction" in text.lower():
             print(text)
     # print(soup_list)
     # print(soup_text)
