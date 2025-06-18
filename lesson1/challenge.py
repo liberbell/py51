@@ -76,5 +76,5 @@ if resp.status_code == 200:
     soup_id = soup.find_all(attrs={"id": lambda x: x is not None})
     soup_id = soup.find_all(lambda x: x is not None)
     soup_id = soup.find_all(lambda x: x.has_attr("id"))
-    soup_id = fiction_category_anchor(soup)
+    soup_id = soup.find_all(fiction_category_anchor)
     print(soup_id)
