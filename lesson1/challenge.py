@@ -102,11 +102,14 @@ if resp.status_code == 200:
         title = book_tag.find("h3").find("a")["title"]
         titles.append(title)
 
-    print(titles)
+    # print(titles)
 
     title_tags = soup.select("article.product_pod > h3 > a")
     for tag in title_tags:
         title = tag["title"]
-        print(title)
+        # print(title)
     # titles = [tag["title"] for tag in title_tags]
+
+    # print(soup.select("[title]"))
+    print(soup.select("[title*=Human]"))
     
