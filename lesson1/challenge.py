@@ -97,3 +97,7 @@ if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
 
     book_tags = soup.find_all("article", attrs={"class": "product_pod"})
+    titles = []
+    for book_tag in book_tags:
+        title = book_tag.find("h3").find("a")["title"]
+        titles.append(title)
