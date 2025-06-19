@@ -116,6 +116,6 @@ resp = requests.get(url)
 
 if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
-    a_tags = soup.find_all("a", limit=1)
+    a_tags = soup.find_all("a", limit=3)
     print(a_tags)
     
