@@ -111,5 +111,6 @@ if resp.status_code == 200:
     # titles = [tag["title"] for tag in title_tags]
 
     # print(soup.select("[title]"))
-    print(soup.select("[title*=Human]"))
+    # print(soup.select("[title*=Human]"))
+    print(soup.select("button.btn-primary[data-loading-text][class*=primary]"))
     
