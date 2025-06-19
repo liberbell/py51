@@ -70,25 +70,30 @@ resp = requests.get(url)
 # df.to_csv("book.csv", index=False)
 # df.to_json("book.json", orient="records")
 
-if resp.status_code == 200:
-    soup = BeautifulSoup(resp.content, "html.parser")
+# if resp.status_code == 200:
+#     soup = BeautifulSoup(resp.content, "html.parser")
     # soup_id = soup.find_all(attrs={"id": "messages"})
     # soup_id = soup.find_all(attrs={"id": lambda x: x is not None})
     # soup_id = soup.find_all(lambda x: x is not None)
     # soup_id = soup.find_all(lambda x: x.has_attr("id"))
     # soup_id = soup.find_all(fiction_category_anchor)
     # soup_text = re.compile("Fiction", re.I)
-    soup_text = soup.find_all(string=re.compile("Fiction", re.I))
+    # soup_text = soup.find_all(string=re.compile("Fiction", re.I))
     # for text in soup_text:
         # print(text.strip())
-    soup_list = list(soup.stripped_strings)
+    # soup_list = list(soup.stripped_strings)
     # for text in soup_list:
     #     if "fiction" in text.lower():
     #         print(text)
     # print(soup_list)
     # print(soup_text)
-    soup_text = soup.find_all("a", string=re.compile("Fiction", re.I))
-    all_text = list(soup.strings)
-    for text in all_text:
-        if "fiction" in text.lower() and text.parent.name == "a":
-            print(text.parent)
+    # soup_text = soup.find_all("a", string=re.compile("Fiction", re.I))
+    # all_text = list(soup.strings)
+    # for text in all_text:
+    #     if "fiction" in text.lower() and text.parent.name == "a":
+    #         print(text.parent)
+
+if resp.status_code == 200:
+    soup = BeautifulSoup(resp.content, "html.parser")
+
+    book_tags = soup.find_all("article", attrs={"class": "product_pod"})
