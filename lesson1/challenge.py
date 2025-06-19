@@ -118,6 +118,6 @@ if resp.status_code == 200:
     soup = BeautifulSoup(resp.content, "html.parser")
     a_tags = soup.find_all("a", limit=3)
     # print(a_tags)
-    print(soup.select("a", limit=1))
+    print(soup.select("a", limit=1)[0])
     print(soup.select_one("a"))
     
