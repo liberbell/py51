@@ -105,5 +105,8 @@ if resp.status_code == 200:
     print(titles)
 
     title_tags = soup.select("article.product_pod > h3 > a")
-    titles = [tag["title"] for tag in title_tags]
-    print(titles)
+    for tag in title_tags:
+        title = tag["title"]
+        print(title)
+    # titles = [tag["title"] for tag in title_tags]
+    
