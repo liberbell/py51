@@ -93,24 +93,29 @@ resp = requests.get(url)
     #     if "fiction" in text.lower() and text.parent.name == "a":
     #         print(text.parent)
 
-if resp.status_code == 200:
-    soup = BeautifulSoup(resp.content, "html.parser")
+# if resp.status_code == 200:
+#     soup = BeautifulSoup(resp.content, "html.parser")
 
-    book_tags = soup.find_all("article", attrs={"class": "product_pod"})
-    titles = []
-    for book_tag in book_tags:
-        title = book_tag.find("h3").find("a")["title"]
-        titles.append(title)
+#     book_tags = soup.find_all("article", attrs={"class": "product_pod"})
+#     titles = []
+#     for book_tag in book_tags:
+#         title = book_tag.find("h3").find("a")["title"]
+#         titles.append(title)
 
     # print(titles)
 
-    title_tags = soup.select("article.product_pod > h3 > a")
-    for tag in title_tags:
-        title = tag["title"]
+    # title_tags = soup.select("article.product_pod > h3 > a")
+    # for tag in title_tags:
+    #     title = tag["title"]
         # print(title)
     # titles = [tag["title"] for tag in title_tags]
 
     # print(soup.select("[title]"))
     # print(soup.select("[title*=Human]"))
-    print(soup.select("button.btn-primary[data-loading-text][class*=primary]"))
+    # print(len(soup.select("button.btn-primary[data-loading-text][class*=primary]")))
+
+if resp.status_code == 200:
+    soup = BeautifulSoup(resp.content, "html.parser")
+    a_tags = soup.find_all("a", limit=1)
+    print(a_tags)
     
