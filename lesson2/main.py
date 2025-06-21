@@ -10,12 +10,13 @@ def get_price_information(ticker, exchange):
     if resp.status_code == 200:
         soup = BeautifulSoup(resp.content, "html.parser")
         price_div = soup.find("div", attrs={'data-last-price': True})
+        price = float(price_div["data-last-price"])
 
-        return price_div
+        return price
     
 
 hpe_share_price = get_price_information("HPE", "NYSE")
-print(hpe_share_price.prettify())
+print(hpe_share_price)
 
 if __name__ == "__main__":
-    print(get_price_information("MSFT", "NASDAQ").prettify())
+    print(get_price_information("MSFT", "NASDAQ"))
