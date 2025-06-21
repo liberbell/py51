@@ -13,13 +13,16 @@ def get_price_information(ticker, exchange):
         price = float(price_div["data-last-price"])
         currency = price_div["data-currency-code"]
 
-        return price, currency
+        return {
+            "ticker": ticker,
+            "exchange": exchange,
+            "price": price,
+            "currency": currency
+        }
     else:
         print("Request failed.")
     
 
-hpe_share_price = get_price_information("HPE", "NYSE")
-print(hpe_share_price)
-
 if __name__ == "__main__":
+    print(get_price_information("HPE", "NYSE"))
     print(get_price_information("MSFT", "NASDAQ"))
