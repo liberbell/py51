@@ -15,3 +15,4 @@ def get_price_information(ticker, exchange):
     
 
 hpe_share_price = get_price_information("HPE", "NYSE")
+print(hpe_share_price)
