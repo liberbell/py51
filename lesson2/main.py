@@ -9,3 +9,4 @@ def get_price_information(ticker, exchange):
     resp = requests.get(url)
     if resp.status_code == 200:
         soup = BeautifulSoup(resp.content, "html.parser")
+        price_div = soup.find("div", attrs={'data-last-price': True})
