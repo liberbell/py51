@@ -11,7 +11,7 @@ def get_price_information(ticker, exchange):
         soup = BeautifulSoup(resp.content, "html.parser")
         price_div = soup.find("div", attrs={'data-last-price': True})
         price = float(price_div["data-last-price"])
-        currency = price_div["data-lcurrency-code"]
+        currency = price_div["data-currency-code"]
 
         return price, currency
     else:
