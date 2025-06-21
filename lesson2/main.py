@@ -16,3 +16,6 @@ def get_price_information(ticker, exchange):
 
 hpe_share_price = get_price_information("HPE", "NYSE")
 print(hpe_share_price)
+
+if if __name__ == "__main__":
+    get_price_information("MSFT", "NASDAQ")
