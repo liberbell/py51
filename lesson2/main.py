@@ -11,8 +11,11 @@ def get_price_information(ticker, exchange):
         soup = BeautifulSoup(resp.content, "html.parser")
         price_div = soup.find("div", attrs={'data-last-price': True})
         price = float(price_div["data-last-price"])
+        currency = price_div["data-lcurrency-code"]
 
-        return price
+        return price, currency
+    else:
+        print("Request failed.")
     
 
 hpe_share_price = get_price_information("HPE", "NYSE")
