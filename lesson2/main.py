@@ -11,6 +11,12 @@ class Stock:
     currency: str = "USD"
     jpn_price: float = 0
 
+    def __post_init__(self):
+        price_info = get_price_information(self.ticker, self.exchange)
+
+        self.price = price_info["price"]
+        self.currency = price_info["currency"]
+
 def get_fx_to_jpn(currency):
     url = f"https://www.google.com/finance/quote/{currency}-JPY"
     resp = requests.get(url)
