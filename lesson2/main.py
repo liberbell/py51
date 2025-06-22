@@ -23,6 +23,12 @@ class Position:
     stock: Stock
     quantity: int = 0
 
+@dataclass
+class Portfolio:
+    positions: list[Position] = None
+
+    def get_total_value(self):
+
 def get_fx_to_jpn(currency):
     url = f"https://www.google.com/finance/quote/{currency}-JPY"
     resp = requests.get(url)
