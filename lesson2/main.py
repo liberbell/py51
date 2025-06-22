@@ -83,5 +83,5 @@ if __name__ == "__main__":
     shop = Stock("SHOP", "TSE")
     msft = Stock("MSFT", "NASDAQ")
     csco = Stock("CSCO", "NASDAQ")
-    portfolio = Portfolio(Position(shop, 10), Position(msft, 10), Position(csco, 10))
+    portfolio = Portfolio([Position(shop, 10), Position(msft, 10), Position(csco, 10)])
     print(portfolio.get_total_value())
