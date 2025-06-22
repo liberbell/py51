@@ -6,6 +6,10 @@ from dataclasses import dataclass
 @dataclass
 class Stock:
     ticker: str
+    exchange: str
+    price: float
+    currency: str
+    usd_price: float
 
 def get_fx_to_usd(currency):
     url = f"https://www.google.com/finance/quote/{currency}-USD"
