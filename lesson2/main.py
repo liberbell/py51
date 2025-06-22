@@ -41,7 +41,7 @@ def get_price_information(ticker, exchange):
             "exchange": exchange,
             "price": price,
             "currency": currency,
-            "usd_price": price_jpn
+            "jpn_price": price_jpn
         }
     else:
         print("Request failed.")
