@@ -1,6 +1,11 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
+from dataclasses import dataclass
+
+@dataclass
+class Stock:
+    ticker: str
 
 def get_fx_to_usd(currency):
     url = f"https://www.google.com/finance/quote/{currency}-USD"
