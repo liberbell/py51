@@ -82,4 +82,5 @@ if __name__ == "__main__":
     # print(Stock("SHOP", "TSE"))
     shop = Stock("SHOP", "TSE")
     msft = Stock("MSFT", "NASDAQ")
-    print(Portfolio(Position(shop, 10), Position(msft, 10)))
+    csco = Stock("CSCO", "NASDAQ")
+    print(Portfolio(Position(shop, 10), Position(msft, 10), Position(csco, 10)))
