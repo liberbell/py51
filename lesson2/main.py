@@ -7,9 +7,9 @@ from dataclasses import dataclass
 class Stock:
     ticker: str
     exchange: str
-    price: float
-    currency: str
-    usd_price: float
+    price: float = 0
+    currency: str = "USD"
+    usd_price: float = 0
 
 def get_fx_to_usd(currency):
     url = f"https://www.google.com/finance/quote/{currency}-USD"
@@ -23,7 +23,6 @@ def get_fx_to_usd(currency):
         print("Request failed.")
 
 def get_price_information(ticker, exchange):
-    # url = "https://www.google.com/finance/quote/HPE:NYSE?authuser=0"
     url = f"https://www.google.com/finance/quote/{ticker}:{exchange}?authuser=0"
 
     resp = requests.get(url)
