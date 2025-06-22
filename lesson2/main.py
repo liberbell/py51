@@ -26,7 +26,7 @@ def get_price_information(ticker, exchange):
 
         price_usd = price
         if currency != "USD":
-            price_usd = price * get_fx_to_usd(currency)
+            price_usd = round(price * get_fx_to_usd(currency), 2)
 
         return {
             "ticker": ticker,
