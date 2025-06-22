@@ -18,6 +18,11 @@ class Stock:
         self.currency = price_info["currency"]
         self.jpn_price = price_info["jpn_price"]
 
+@dataclass
+class Position:
+    stock: Stock
+    quantity: int = 0
+
 def get_fx_to_jpn(currency):
     url = f"https://www.google.com/finance/quote/{currency}-JPY"
     resp = requests.get(url)
@@ -61,5 +66,7 @@ if __name__ == "__main__":
     # print(get_price_information("SHOP", "NASDAQ"))
     # print(get_price_information("NTT", "TYO"))
     # print(get_fx_to_usd("CAD"))
-    print(Stock("HPE", "NYSE"))
-    print(Stock("SHOP", "TSE"))
+    # print(Stock("HPE", "NYSE"))
+    # print(Stock("SHOP", "TSE"))
+    shop = Stock("SHOP", "TSE")
+    print(Position(shop, 10))
