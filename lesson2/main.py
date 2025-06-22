@@ -31,7 +31,9 @@ class Portfolio:
         total_value =0
 
         for position in self.positions:
-            total_value += position.stock.jpn_price * position.quantity
+            total_value += position.stock.jpn_price * position.stock.quantity
+
+            return total_value
 
 def get_fx_to_jpn(currency):
     url = f"https://www.google.com/finance/quote/{currency}-JPY"
@@ -79,4 +81,5 @@ if __name__ == "__main__":
     # print(Stock("HPE", "NYSE"))
     # print(Stock("SHOP", "TSE"))
     shop = Stock("SHOP", "TSE")
-    print(Position(shop, 10))
+    msft = Stock("MSFT", "NASDAQ")
+    print(Portfolio(Position(shop, 10), Position(msft, 10)))
