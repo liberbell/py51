@@ -24,11 +24,16 @@ def get_price_information(ticker, exchange):
         price = float(price_div["data-last-price"])
         currency = price_div["data-currency-code"]
 
+        price_usd = price
+        if currency != "USD":
+            price_usd = price * get_fx_to_usd(currency)
+
         return {
             "ticker": ticker,
             "exchange": exchange,
             "price": price,
-            "currency": currency
+            "currency": currency,
+            "usd_price": price_usd
         }
     else:
         print("Request failed.")
