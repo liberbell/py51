@@ -9,10 +9,10 @@ class Stock:
     exchange: str
     price: float = 0
     currency: str = "USD"
-    usd_price: float = 0
+    jpn_price: float = 0
 
-def get_fx_to_usd(currency):
-    url = f"https://www.google.com/finance/quote/{currency}-USD"
+def get_fx_to_jpn(currency):
+    url = f"https://www.google.com/finance/quote/{currency}-JPY"
     resp = requests.get(url)
     if resp.status_code == 200:
         soup = BeautifulSoup(resp.content, "html.parser")
@@ -32,16 +32,16 @@ def get_price_information(ticker, exchange):
         price = float(price_div["data-last-price"])
         currency = price_div["data-currency-code"]
 
-        price_usd = price
-        if currency != "USD":
-            price_usd = round(price * get_fx_to_usd(currency), 2)
+        price_jpn = price
+        if currency != "JPY":
+            price_jpn = round(price * get_fx_to_jpn(currency), 2)
 
         return {
             "ticker": ticker,
             "exchange": exchange,
             "price": price,
             "currency": currency,
-            "usd_price": price_usd
+            "usd_price": price_jpn
         }
     else:
         print("Request failed.")
