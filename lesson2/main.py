@@ -28,6 +28,10 @@ class Portfolio:
     positions: list[Position] = None
 
     def get_total_value(self):
+        total_value =0
+
+        for position in self.positions:
+            total_value += position.stock.jpn_price * position.quantity
 
 def get_fx_to_jpn(currency):
     url = f"https://www.google.com/finance/quote/{currency}-JPY"
