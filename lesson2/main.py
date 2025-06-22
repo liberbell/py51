@@ -26,3 +26,5 @@ def get_price_information(ticker, exchange):
 if __name__ == "__main__":
     print(get_price_information("HPE", "NYSE"))
     print(get_price_information("MSFT", "NASDAQ"))
+    print(get_price_information("SHOP", "TSE"))
+    print(get_price_information("NTT", "TYO"))
