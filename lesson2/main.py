@@ -87,6 +87,28 @@ def display_portfolio_summary(portfolio):
             position.quantity * position.stock.jpn_price,
             (position.quantity * position.stock.jpn_price) / portfolio_value * 100
         ])
+    
+    print(tabulate(position_data, headers=[
+        "Ticker",
+        "Exchange",
+        "Quantity",
+        "Price(USD)",
+        "Price(JPY)",
+        "Allocation(%)"
+    ],
+    tablefmt="psql",
+    floatfmt=".2f"
+    ))
+
+# if __name__ == "__main__":
+#     # print(get_price_information("HPE", "NYSE"))
+#     # print(get_price_information("MSFT", "NASDAQ"))
+#         "Ticker",
+#         "Exchange",
+#         "Quantity",
+#         "Price(USD)",
+        
+#     ]))
 
 if __name__ == "__main__":
     # print(get_price_information("HPE", "NYSE"))
