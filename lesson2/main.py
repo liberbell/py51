@@ -85,6 +85,7 @@ def display_portfolio_summary(portfolio):
             position.quantity,
             position.stock.price,
             position.quantity * position.stock.jpn_price,
+            (position.quantity * position.stock.jpn_price) / portfolio_value * 100
         ])
 
 if __name__ == "__main__":
