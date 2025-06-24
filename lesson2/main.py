@@ -32,7 +32,7 @@ class Portfolio:
         total_value =0
 
         for position in self.positions:
-            total_value += position.quantity * position.stock.jpn_price
+            total_value += position.quantity * position.stock.price
 
             return total_value
 
@@ -85,7 +85,7 @@ def display_portfolio_summary(portfolio):
             position.quantity,
             position.stock.price,
             position.quantity * position.stock.jpn_price,
-            (position.quantity * position.stock.jpn_price) / portfolio_value * 100
+            (position.quantity * position.stock.price) / portfolio_value * 100
         ])
     
     print(tabulate(position_data, headers=[
@@ -100,7 +100,7 @@ def display_portfolio_summary(portfolio):
     floatfmt=".2f"
     ))
 
-    print(f"Total Portfolio Value (JPY): {portfolio_value:,.2f}")
+    print(f"Total Portfolio Value (JPY): {portfolio_value:,.2f}.")
 
 # if __name__ == "__main__":
 #     # print(get_price_information("HPE", "NYSE"))
