@@ -72,11 +72,18 @@ def get_price_information(ticker, exchange):
         print("Request failed.")
     
 def display_portfolio_summary(portfolio):
-    data = []
     if not isinstance(portfolio, Portfolio):
         raise TypeError("Please provide a instance of the Portfolio type.")
     
     portfolio_value = portfolio.get_total_value()
+    position_data = []
+
+    for position in portfolio.positions:
+        position_data.append([
+            position.stock.ticker,
+            position.stock.exchange,
+            position
+        ])
 
 if __name__ == "__main__":
     # print(get_price_information("HPE", "NYSE"))
