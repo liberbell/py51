@@ -78,7 +78,7 @@ def display_portfolio_summary(portfolio):
     portfolio_value = portfolio.get_total_value()
     position_data = []
 
-    for position in sorted(portfolio.positions, key=lambda x: x.quantity * x.stock.jpn_price):
+    for position in sorted(portfolio.positions, key=lambda x: x.quantity * x.stock.jpn_price, reverse=True):
         position_data.append([
             position.stock.ticker,
             position.stock.exchange,
