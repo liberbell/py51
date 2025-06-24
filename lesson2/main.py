@@ -82,7 +82,9 @@ def display_portfolio_summary(portfolio):
         position_data.append([
             position.stock.ticker,
             position.stock.exchange,
-            position
+            position.quantity,
+            position.stock.price,
+            position.stock.jpn_price,
         ])
 
 if __name__ == "__main__":
