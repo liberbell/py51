@@ -2,6 +2,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 from dataclasses import dataclass
+from tabulate import tabulate
 
 @dataclass
 class Stock:
@@ -84,4 +85,5 @@ if __name__ == "__main__":
     msft = Stock("MSFT", "NASDAQ")
     csco = Stock("CSCO", "NASDAQ")
     portfolio = Portfolio([Position(shop, 10), Position(msft, 10), Position(csco, 10)])
-    print(portfolio.get_total_value())
+    # print(portfolio.get_total_value())
+    display_portfolio_summary(portfolio)
