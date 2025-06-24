@@ -32,7 +32,7 @@ class Portfolio:
         total_value =0
 
         for position in self.positions:
-            total_value += position.quantity * position.stock.price
+            total_value += position.quantity * position.stock.jpn_price
 
             return total_value
 
