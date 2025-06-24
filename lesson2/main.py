@@ -102,16 +102,6 @@ def display_portfolio_summary(portfolio):
 
     print(f"Total Portfolio Value (JPY): {portfolio_value:,.2f}.")
 
-# if __name__ == "__main__":
-#     # print(get_price_information("HPE", "NYSE"))
-#     # print(get_price_information("MSFT", "NASDAQ"))
-#         "Ticker",
-#         "Exchange",
-#         "Quantity",
-#         "Price(USD)",
-        
-#     ]))
-
 if __name__ == "__main__":
     # print(get_price_information("HPE", "NYSE"))
     # print(get_price_information("MSFT", "NASDAQ"))
