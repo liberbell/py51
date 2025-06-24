@@ -78,7 +78,7 @@ def display_portfolio_summary(portfolio):
     portfolio_value = portfolio.get_total_value()
     position_data = []
 
-    for position in portfolio.positions:
+    for position in sorted(portfolio.positions, key=lambda x: x.quantity * x.stock.jpn_price):
         position_data.append([
             position.stock.ticker,
             position.stock.exchange,
@@ -100,7 +100,7 @@ def display_portfolio_summary(portfolio):
     floatfmt=".2f"
     ))
 
-    print(f"Total Portfolio Value (JPY): {portfolio_value:,.2f}.")
+    print(f"Total Portfolio Value (JPY): ${portfolio_value:,.2f}.")
 
 if __name__ == "__main__":
     # print(get_price_information("HPE", "NYSE"))
