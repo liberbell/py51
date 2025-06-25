@@ -187,6 +187,8 @@ headers = {
     "x-forter-token": "5764664add3e44a1a631d8257379ed63_1750890897453_134522_UDF43-m4_13ck__tt",
     "x-user-datetime": "2025-06-26T07:45:26+09:00",
     "x-ui-language": "en",
+    "x-ui-region": "CA",
+    "x-ui-platform": "web",
 
     :authority
 use1-prod-th.rbictg.com
@@ -226,11 +228,8 @@ cross-site
 
 x-session-id
 d8c8dcb0-df44-41d9-a19a-aa865d8f1462
-x-ui-language
-en
-x-ui-platform
-web
-x-ui-region
-CA
+
+
+
 
 }
