@@ -197,3 +197,5 @@ headers = {
     "sec-fetch-site": "cross-site",
     "content-type": "application/json"
 }
+
+response = requests.request("POST", url=url, json=payload, headers=headers)
