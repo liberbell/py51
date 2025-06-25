@@ -182,7 +182,11 @@ headers = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
     "accept": "*/*",
     "accept-language": "ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
-    "accept-encoding": "gzip, deflate, br, zstd"
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "x-session-id": "d8c8dcb0-df44-41d9-a19a-aa865d8f1462",
+    "x-forter-token": "5764664add3e44a1a631d8257379ed63_1750890897453_134522_UDF43-m4_13ck__tt",
+    "x-user-datetime": "2025-06-26T07:45:26+09:00",
+    "x-ui-language": "en",
 
     :authority
 use1-prod-th.rbictg.com
@@ -193,8 +197,7 @@ POST
 :scheme
 https
 
-accept-encoding
-gzip, deflate, br, zstd
+
 
 apollographql-client-name
 wl-web
@@ -221,8 +224,6 @@ cors
 sec-fetch-site
 cross-site
 
-x-forter-token
-5764664add3e44a1a631d8257379ed63_1750890897453_134522_UDF43-m4_13ck__tt
 x-session-id
 d8c8dcb0-df44-41d9-a19a-aa865d8f1462
 x-ui-language
@@ -231,6 +232,5 @@ x-ui-platform
 web
 x-ui-region
 CA
-x-user-datetime
-2025-06-26T07:45:26+09:00
+
 }
