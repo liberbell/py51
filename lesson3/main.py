@@ -189,47 +189,11 @@ headers = {
     "x-ui-language": "en",
     "x-ui-region": "CA",
     "x-ui-platform": "web",
-
-    :authority
-use1-prod-th.rbictg.com
-:method
-POST
-:path
-/graphql
-:scheme
-https
-
-
-
-apollographql-client-name
-wl-web
-apollographql-client-version
-9ccfb4e
-content-length
-2667
-content-type
-application/json
-origin
-https://www.timhortons.ca
-priority
-u=1, i
-sec-ch-ua
-"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
-sec-ch-ua-mobile
-?0
-sec-ch-ua-platform
-"macOS"
-sec-fetch-dest
-empty
-sec-fetch-mode
-cors
-sec-fetch-site
-cross-site
-
-x-session-id
-d8c8dcb0-df44-41d9-a19a-aa865d8f1462
-
-
-
-
+    "origin": "https://www.timhortons.ca",
+    "DNT": "1",
+    "connection": "keep-alive",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "content-type": "application/json"
 }
