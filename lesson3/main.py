@@ -181,6 +181,8 @@ payload = [
 headers = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
     "accept": "*/*",
+    "accept-language": "ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
+    "accept-encoding": "gzip, deflate, br, zstd"
 
     :authority
 use1-prod-th.rbictg.com
@@ -193,8 +195,7 @@ https
 
 accept-encoding
 gzip, deflate, br, zstd
-accept-language
-ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7
+
 apollographql-client-name
 wl-web
 apollographql-client-version
