@@ -10,7 +10,9 @@ payload = {
             "userLat": 43.447788,
             "userLng": -79.3733,
             "searchRadius": 8000
-        }
+        },
+        "first": 20,
+        "status": "OPEN",
     }
     }
 }
