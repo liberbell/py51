@@ -177,3 +177,59 @@ payload = [
     """
     }
 ]
+
+headers = {
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
+    "accept": "*/*",
+
+    :authority
+use1-prod-th.rbictg.com
+:method
+POST
+:path
+/graphql
+:scheme
+https
+
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7
+apollographql-client-name
+wl-web
+apollographql-client-version
+9ccfb4e
+content-length
+2667
+content-type
+application/json
+origin
+https://www.timhortons.ca
+priority
+u=1, i
+sec-ch-ua
+"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"macOS"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+cross-site
+
+x-forter-token
+5764664add3e44a1a631d8257379ed63_1750890897453_134522_UDF43-m4_13ck__tt
+x-session-id
+d8c8dcb0-df44-41d9-a19a-aa865d8f1462
+x-ui-language
+en
+x-ui-platform
+web
+x-ui-region
+CA
+x-user-datetime
+2025-06-26T07:45:26+09:00
+}
