@@ -2,14 +2,16 @@ import requests
 
 url = "https://use1-prod-th.rbictg.com/graphql"
 
+# filter: "NEARBY", coordinates: {userLat: 43.653226, userLng: -79.3831843, searchRadius: 8000},…}
+
 payload = [
     {
         "operationName": "GetRestaurants",
         "variables": {"input": {
             "filter": "NEARBY",
-            "cordinates": {
-                "userLat": 43.447788,
-                "userLng": -79.3733,
+            "coordinates": {
+                "userLat": 43.653226,
+                "userLng": -79.3831843,
                 "searchRadius": 8000
             },
             "first": 20,
