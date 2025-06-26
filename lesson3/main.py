@@ -1,10 +1,11 @@
 import requests
+import json
 
 url = "https://use1-prod-th.rbictg.com/graphql"
 
 # filter: "NEARBY", coordinates: {userLat: 43.653226, userLng: -79.3831843, searchRadius: 8000},…}
 
-payload = [
+payload = json.dumps([
     {
         "operationName": "GetRestaurants",
         "variables": {"input": {
@@ -178,7 +179,7 @@ payload = [
     }
     """
     }
-]
+])
 
 headers = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
