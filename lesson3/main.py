@@ -187,7 +187,7 @@ headers = {
     "accept-language": "ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
     "accept-encoding": "gzip, deflate, br, zstd",
     "x-session-id": "d8c8dcb0-df44-41d9-a19a-aa865d8f1462",
-    "x-forter-token": "5764664add3e44a1a631d8257379ed63_1750979588351_51_UDF43-m4_13ck__tt",
+    "x-forter-token": "5764664add3e44a1a631d8257379ed63_1750980536710_51_UDF43-m4_13ck__tt",
     "x-user-datetime": "2025-06-26T07:45:26+09:00",
     "x-ui-language": "en",
     "x-ui-region": "CA",
