@@ -23,3 +23,7 @@ headers = {
     "sec-fetch-site": "cross-site",
     "content-type": "application/json"
 }
+
+response = requests.get("GET", url, headers=headers)
+
+print(response.text)
