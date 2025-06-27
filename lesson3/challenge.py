@@ -20,10 +20,11 @@ headers = {
     "connection": "keep-alive",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "content-type": "application/json"
+    "sec-fetch-site": "same-site",
+    "content-type": "application/json",
+    "TE": "trailers"
 }
 
-response = requests.get("GET", url, headers=headers)
+response = requests.get(url, headers=headers)
 
 print(response.text)
