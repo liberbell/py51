@@ -31,3 +31,5 @@ def get_job_for(lat=None, lng=None, results=20):
     response = requests.get(url, headers=headers)
 
     print(response.text)
+
+get_job_for(43.6532, -793832, 20)
