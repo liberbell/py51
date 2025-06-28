@@ -3,7 +3,7 @@ import requests
 def get_job_for(lat=None, lng=None, results=20):
     if lat is None or lng is None:
         raise ValueError("Latitude and longitude must be provided")
-    url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]=43.70643&filters[lng]=-79.39864&filters[distance]=20&sort[distance]=asc"
+    url = f"https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]={lat}&filters[lng]={lng}&filters[distance]={results}&sort[distance]=asc"
 
     headers = {
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
