@@ -3,8 +3,6 @@ import requests
 # def get_job_for(lat=None, lng=None, results=20):
 #     if lat is None or lng is None:
 #         raise ValueError("Latitude and longitude must be provided")
-#url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]={lat}&filters[lng]={lng}&filters[distance]={20}&sort[distance]=asc"
-#url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.company&limit=24&filters^[brand.id^]=58bd9e7f472bd&filters^[lat^]=43.6532&filters^[lng^]=-79.3832&fil
 url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]=43.70643&filters[lng]=-79.39864&filters[distance]=20&sort[distance]=asc"
 
 
@@ -22,17 +20,6 @@ headers = {
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-site",
     "TE": "trailers"
-
-    # 'Accept': 'application/json, text/plain, */*',
-    # 'Accept-Language': 'en-US,en;q=0.5',
-    # 'Accept-Encoding': 'gzip, deflate, br',
-    # 'HigherMe-Client-Version': '2023.0.11.0',
-    # 'Origin': 'https://app.higherme.com',
-    # 'Connection': 'keep-alive',
-    # 'Sec-Fetch-Dest': 'empty',
-    # 'Sec-Fetch-Mode': 'cors',
-    # 'Sec-Fetch-Site': 'same-site',
-    # 'TE': 'trailers'
 }
 
 response = requests.get(url, headers=headers)
