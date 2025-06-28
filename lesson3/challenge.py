@@ -9,7 +9,7 @@ url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.c
 
 headers = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
-    "accept": "*/*",
+    "accept": "application/json, text/plain */*",
     "accept-language": "ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
     "accept-encoding": "gzip, deflate, br, zstd",
     "x-session-id": "d8c8dcb0-df44-41d9-a19a-aa865d8f1462",
@@ -18,13 +18,12 @@ headers = {
     "x-ui-language": "en",
     "x-ui-region": "CA",
     "x-ui-platform": "web",
-    "origin": "https://www.timhortons.ca",
+    "origin": "https://app.higherme.com",
     "DNT": "1",
     "connection": "keep-alive",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-site",
-    "content-type": "application/json",
     "TE": "trailers"
 }
 
