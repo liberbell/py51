@@ -24,4 +24,5 @@ def get_job_for(lat=None, lng=None, results=20):
 
     return response.json()
 
-print(get_job_for(43.6532, -79.3832, 20))
+response_data = get_job_for(43.6532, -79.3832, results=20)
+print(response_data)
