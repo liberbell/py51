@@ -1,29 +1,27 @@
 import requests
 
-# def get_job_for(lat=None, lng=None, results=20):
-#     if lat is None or lng is None:
-#         raise ValueError("Latitude and longitude must be provided")
-url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]=43.70643&filters[lng]=-79.39864&filters[distance]=20&sort[distance]=asc"
+def get_job_for(lat=None, lng=None, results=20):
+    if lat is None or lng is None:
+        raise ValueError("Latitude and longitude must be provided")
+    url = "https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]=43.70643&filters[lng]=-79.39864&filters[distance]=20&sort[distance]=asc"
 
+    headers = {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
+        "accept": "application/json, text/plain */*",
+        "accept-language": "ja,en-US;q=0.7,en-GB;q=0.8,en;q=0.3",
+        "accept-encoding": "gzip, deflate, br",
+        "Higherme-Client-Version": "2023.0.2.0a",
+        "origin": "https://app.higherme.com",
+        "DNT": "1",
+        "connection": "keep-alive",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-site",
+        "TE": "trailers"
+    }
 
+    response = requests.get(url, headers=headers)
 
-headers = {
-    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
-    "accept": "application/json, text/plain */*",
-    "accept-language": "ja,en-US;q=0.7,en-GB;q=0.8,en;q=0.3",
-    "accept-encoding": "gzip, deflate, br",
-    "Higherme-Client-Version": "2023.0.2.0a",
-    "origin": "https://app.higherme.com",
-    "DNT": "1",
-    "connection": "keep-alive",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "TE": "trailers"
-}
+    print(response.text)
 
-response = requests.get(url, headers=headers)
-
-print(response.text)
-
-# get_job_for(43.6532, -793832, 20)
+get_job_for(43.6532, -79.3832, 20)
