@@ -12,6 +12,7 @@ headers = {
     "accept": "application/json, text/plain */*",
     "accept-language": "ja,en-US;q=0.7,en-GB;q=0.8,en;q=0.3",
     "accept-encoding": "gzip, deflate, br",
+    "Higherme-Client-Version": "2023.0.2.0a",
     "origin": "https://app.higherme.com",
     "DNT": "1",
     "connection": "keep-alive",
