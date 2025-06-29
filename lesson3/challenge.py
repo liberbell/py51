@@ -37,3 +37,4 @@ df = pd.DataFrame(data = [r.get("attributes") for r in response_data.get("data")
                    columns=["title", "full_time", "part_time", "requirements", "distance"])
 
 print(df)
+df.to_csv("jobs.csv", index=False)
