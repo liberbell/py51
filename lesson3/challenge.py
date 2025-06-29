@@ -33,5 +33,7 @@ response_data = get_job_for(43.6532, -79.3832, results=20)
 
 #     print(df)
 
-print(pd.DataFrame(data = [r.get("attributes") for r in response_data.get("data")],
-                   columns=["title", "full_time", "part_time", "requirements", "distance"]))
+df = pd.DataFrame(data = [r.get("attributes") for r in response_data.get("data")],
+                   columns=["title", "full_time", "part_time", "requirements", "distance"])
+
+print(df)
