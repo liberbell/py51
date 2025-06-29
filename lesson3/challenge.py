@@ -21,25 +21,13 @@ def get_job_for(lat=None, lng=None, results=20):
         "TE": "trailers"
     }
 
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers).json()
 
-    response_data = response.json()
-
-    df = pd.DataFrame(data = [r.get("attributes") for r in response_data.get("data")],
+    df = pd.DataFrame(data = [r.get("attributes") for r in response.get("data")],
                    columns=["title", "full_time", "part_time", "requirements", "distance"])
 
     return df
 
 response_data = get_job_for(43.6532, -79.3832, results=20)
-# print(response_data.get("data"))
-# for r in response_data.get("data"):
-#     data = r.get("attributes")
-#     df = pd.DataFrame(data)
 
-#     print(df)
-
-df = pd.DataFrame(data = [r.get("attributes") for r in response_data.get("data")],
-                   columns=["title", "full_time", "part_time", "requirements", "distance"])
-
-print(df)
-df.to_csv("jobs.csv", index=False)
+print(response_data)
