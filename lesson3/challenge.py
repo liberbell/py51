@@ -27,8 +27,10 @@ def get_job_for(lat=None, lng=None, results=20):
 
 response_data = get_job_for(43.6532, -79.3832, results=20)
 # print(response_data.get("data"))
-for r in response_data.get("data"):
-    data = r.get("attributes")
-    df = pd.DataFrame(data)
+# for r in response_data.get("data"):
+#     data = r.get("attributes")
+#     df = pd.DataFrame(data)
 
-    print(df)
+#     print(df)
+
+print(pd.DataFrame(data = [r.get("attributes") for r in response_data.get("data")]))
