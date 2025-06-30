@@ -16,7 +16,10 @@ tree = HTMLParser(resp.text)
 # print(random_node.text())
 # print(tree.css("p")[0])
 
-for i in range(100):
-    random_node = choice(tree.css("img"))
-    print(tree.css("p")[0].text())
-    i += 1
+# for i in range(100):
+#     random_node = choice(tree.css("img"))
+#     print(tree.css("p")[0].text())
+#     i += 1
+
+edit_anchors = tree.css("span a")
+print(edit_anchors)
