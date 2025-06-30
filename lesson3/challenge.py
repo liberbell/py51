@@ -5,6 +5,11 @@ import pgeocode
 def get_job_for(lat=None, lng=None, postal_code=None, results=20):
     if (lat is None or lng is None) and postal_code is None:
         raise ValueError("Latitude and longitude must be provided")
+    
+    if postal_code is not None:
+        geo = nomi.query_postal_code(postal_code)
+        lat = geo.latitude
+        raise ValueError("")
     url = f"https://api.higherme.com/classic/jobs?page=1&includes=location,location.company,location.externalServiceReferences&limit=24&filters[brand.id]=58bd9e7f472bd&filters[lat]={lat}&filters[lng]={lng}&filters[distance]={results}&sort[distance]=asc"
 
     headers = {
