@@ -22,4 +22,5 @@ tree = HTMLParser(resp.text)
 #     i += 1
 
 edit_anchors = tree.css("span a")
-print(edit_anchors)
+for edit_anchor in edit_anchors:
+    print(edit_anchor.attributes["href"])
