@@ -7,7 +7,7 @@ def get_job_for(lat=None, lng=None, postal_code=None, results=20):
         raise ValueError("Latitude and longitude must be provided")
     
     if postal_code is not None:
-        nomi = Nominatim()
+        nomi = Nominatim("ca")
 
         geo = nomi.query_postal_code(postal_code)
         lat = geo.latitude
