@@ -21,6 +21,10 @@ tree = HTMLParser(resp.text)
 #     print(tree.css("p")[0].text())
 #     i += 1
 
-edit_anchors = tree.css("div > span > a")
+# edit_anchors = tree.css("div > span > a")
+# for edit_anchor in edit_anchors:
+#     print(edit_anchor.attributes["href"])
+
+edit_anchors = tree.css(".mw-editsection-bracket + a")
 for edit_anchor in edit_anchors:
     print(edit_anchor.attributes["href"])
