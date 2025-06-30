@@ -10,8 +10,13 @@ tree = HTMLParser(resp.text)
 # print(type(tree))
 # print(tree.css("p"))
 
-random_node = choice(tree.css("img"))
+# random_node = choice(tree.css("img"))
 # print(random_node.attributes)
 # print(random_node.html)
 # print(random_node.text())
-print(tree.css("p")[0])
+# print(tree.css("p")[0])
+
+for i in range(100):
+    random_node = choice(tree.css("img"))
+    print(tree.css("p")[0].text())
+    i += 1
