@@ -41,6 +41,11 @@ response_data = get_job_for(43.6532, -79.3832, results=20)
 
 print(response_data)
 
-nomi = pgeocode.Nominatim("ca")
+
+response_data = get_job_for(postal_code="m5e", results=20)
+
+print(response_data)
+
+# nomi = .Nominatim("ca")
 # print(nomi.query_location("union station"))
-print(nomi.query_location("m5e"))
+# print(nomi.query_location("m5e"))
