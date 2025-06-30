@@ -11,3 +11,4 @@ tree = HTMLParser(resp.text)
 # print(tree.css("p"))
 
 random_node = choice(tree.css("img"))
+print(random_node.attributes)
