@@ -30,5 +30,6 @@ tree = HTMLParser(resp.text)
 # for all_edit in all_edits:
 #     print(all_edit.parent.tag)
 
-all_edits = tree.css("p.[class]")
+# all_edits = tree.css("p[class]")
+all_edits = tree.css("a > img[src*='upload.wikimedia.org'], p")
 print(all_edits)
