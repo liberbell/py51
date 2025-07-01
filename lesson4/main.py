@@ -26,5 +26,6 @@ tree = HTMLParser(resp.text)
 #     print(edit_anchor.attributes["href"])
 
 all_edits = tree.css(".mw-editsection-bracket + a")
+# print(len(all_edits))
 for all_edit in all_edits:
-    print(all_edit.attributes["href"])
+    print(all_edit.parent.parent.tag)
