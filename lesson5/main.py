@@ -2,7 +2,7 @@ import requests
 from httpx import get
 from selectolax.parser import HTMLParser
 
-def get_img_tags_for(term="galaxy"):
+def get_img_tags_for(term):
     url = f"https://unsplash.com/s/phtoss/{term}"
     resp = get(url)
     
@@ -14,4 +14,4 @@ def get_img_tags_for(term="galaxy"):
     return imgs
 
 if __name__ == "__main__":
-    print(get_img_tags_for("python"))
+    print(get_img_tags_for("galaxy"))
