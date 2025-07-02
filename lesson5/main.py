@@ -9,11 +9,9 @@ headers = {
     "content-type": "application/json"
 }
 
-def get_img_tags_for(term):
+def get_img_tags_for(term=None):
     url = f"https://unsplash.com/s/photos/{term}"
-    print(url)
     resp = get(url, headers=headers)
-    print(resp.status_code)
     
     if resp.status_code != 200:
         raise Exception("Error getting response")
@@ -25,6 +23,6 @@ def get_img_tags_for(term):
     return imgs
 
 if __name__ == "__main__":
-    image_nodes = get_img_tags_for('python')
+    image_nodes = get_img_tags_for('galaxy')
     print(len(image_nodes))
     print(image_nodes)
