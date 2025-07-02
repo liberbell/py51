@@ -24,8 +24,10 @@ def get_img_tags_for(term=None):
 
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('galaxy')
+
+    image_urls = []
     for image_node in image_nodes:
-        image_urls = image_node.attrs["src"]
+        image_urls.append(image_node.attrs["src"])
 
         for image_url in image_urls:
             print(image_url)
