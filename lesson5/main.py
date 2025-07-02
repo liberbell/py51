@@ -35,6 +35,6 @@ if __name__ == "__main__":
         for image_url in image_urls:
             print(image_url)
 
-    relavent_urls = [i for i in image_urls if image_filter(i, ['plus', 'premium'])]
+    relavent_urls = [i for i in image_urls if image_filter(i, ['plus', 'premium', 'profile'])]
     # print(len(image_nodes))
     # print(image_nodes)
