@@ -32,8 +32,8 @@ if __name__ == "__main__":
     for image_node in image_nodes:
         image_urls.append(image_node.attrs["src"])
 
-        for image_url in image_urls:
-            print(image_url)
+        # for image_url in image_urls:
+        #     print(image_url)
 
     relevent_urls = [i for i in image_urls if image_filter_out(i, ['plus', 'premium', 'profile'])]
     for relevent_url in relevent_urls:
