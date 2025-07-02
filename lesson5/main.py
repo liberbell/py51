@@ -24,5 +24,7 @@ def get_img_tags_for(term=None):
 
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('galaxy')
-    print(len(image_nodes))
-    print(image_nodes)
+    for image_node in image_nodes:
+        print(image_node.attrs["src"])
+    # print(len(image_nodes))
+    # print(image_nodes)
