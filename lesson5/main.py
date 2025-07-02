@@ -19,11 +19,12 @@ def get_img_tags_for(term):
         raise Exception("Error getting response")
     
     tree = HTMLParser(resp.text)
-    # imgs = tree.css("figure a img + div img")
-    imgs = tree.css("div + div a img")
+    imgs = tree.css("figure a img + div img")
+    # imgs = tree.css("div + div a img")
     # //*[@id="«R5iqp6m»"]/div/div/div[2]/figure[1]/div[1]/div/a/img
     return imgs
 
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('python')
     print(len(image_nodes))
+    print(image_nodes)
