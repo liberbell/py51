@@ -22,7 +22,7 @@ def get_img_tags_for(term=None):
     # //*[@id="«R5iqp6m»"]/div/div/div[2]/figure[1]/div[1]/div/a/img
     return imgs
 
-def image_filter(url, keywords):
+def image_filter(url: str, keywords: list) -> bool:
     return not any(x in url for x in keywords)
 
 if __name__ == "__main__":
@@ -34,5 +34,7 @@ if __name__ == "__main__":
 
         for image_url in image_urls:
             print(image_url)
+
+    relavent_urls = [i for i in image_urls if image_filter(i, ['plus', 'premium'])]
     # print(len(image_nodes))
     # print(image_nodes)
