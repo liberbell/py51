@@ -4,8 +4,6 @@ from selectolax.parser import HTMLParser
 
 headers = {
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0",
-    # "accept-language": "ja,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
-    # "accept-encoding": "gzip, deflate, br, zstd",
     "content-type": "application/json"
 }
 
@@ -38,5 +36,3 @@ if __name__ == "__main__":
     relevent_urls = [i for i in image_urls if image_filter_out(i, ['plus', 'premium', 'profile'])]
     for relevent_url in relevent_urls:
         print(relevent_url)
-    # print(len(image_nodes))
-    # print(image_nodes)
