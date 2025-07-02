@@ -22,6 +22,9 @@ def get_img_tags_for(term=None):
     # //*[@id="«R5iqp6m»"]/div/div/div[2]/figure[1]/div[1]/div/a/img
     return imgs
 
+def image_filter(url, keywords):
+    return not any(x in url for x in keywords)
+
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('galaxy')
 
