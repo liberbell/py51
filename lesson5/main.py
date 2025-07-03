@@ -24,13 +24,15 @@ def image_filter_out(url: str, keywords: list) -> bool:
     return not any(x in url for x in keywords)
 
 def get_high_res_img_url(img_node):
-    secret = img_node.attrs=["secret"]
+    secret = img_node.attrs["secret"]
     secret_list = secret.split(", ")
 
     return secret_list
 
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('galaxy')
+
+    [print(get_high_res_img_url(i)) for i in image_nodes]
 
     # image_urls = []
     # for image_node in image_nodes:
