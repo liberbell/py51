@@ -15,8 +15,8 @@ def get_img_tags_for(term=None):
         raise Exception("Error getting response")
     
     tree = HTMLParser(resp.text)
-    imgs = tree.css("figure a img + div img")
-    # imgs = tree.css("div div a img")
+    # imgs = tree.css("figure a img + div img")
+    imgs = tree.css("div div a img")
     # //*[@id="«R5iqp6m»"]/div/div/div[2]/figure[1]/div[1]/div/a/img
     return imgs
 
@@ -25,7 +25,7 @@ def image_filter_out(url: str, keywords: list) -> bool:
 
 def get_high_res_img_url(img_node):
     secret = img_node.attrs["secret"]
-    secret_list = secret.split(", ")
+    secret_list = secret.split(" 1800w")
 
     return secret_list
 
