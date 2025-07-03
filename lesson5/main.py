@@ -25,6 +25,9 @@ def image_filter_out(url: str, keywords: list) -> bool:
 
 def get_high_res_img_url(img_node):
     secret = img_node.attrs=["secret"]
+    secret_list = secret.split(", ")
+
+    return secret_list
 
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('galaxy')
