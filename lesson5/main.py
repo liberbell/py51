@@ -23,16 +23,19 @@ def get_img_tags_for(term=None):
 def image_filter_out(url: str, keywords: list) -> bool:
     return not any(x in url for x in keywords)
 
+def get_high_res_img_url(img_node):
+    secret = img_node.attrs=["secret"]
+
 if __name__ == "__main__":
     image_nodes = get_img_tags_for('galaxy')
 
-    image_urls = []
-    for image_node in image_nodes:
-        image_urls.append(image_node.attrs["src"])
+    # image_urls = []
+    # for image_node in image_nodes:
+    #     image_urls.append(image_node.attrs["src"])
 
-        # for image_url in image_urls:
-        #     print(image_url)
+    #     # for image_url in image_urls:
+    #     #     print(image_url)
 
-    relevent_urls = [i for i in image_urls if image_filter_out(i, ['plus', 'premium', 'profile'])]
-    for relevent_url in relevent_urls:
-        print(relevent_url)
+    # relevent_urls = [i for i in image_urls if image_filter_out(i, ['plus', 'premium', 'profile'])]
+    # for relevent_url in relevent_urls:
+    #     print(relevent_url)
